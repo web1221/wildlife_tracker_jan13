@@ -1,0 +1,13 @@
+<h1>Edit sighting:</h1>
+
+<%= form_for [@animal, @sighting] do |f| %>
+<%= f.label :date %>
+<%= f.text_field :date %>
+<%= f.label :lat %>
+<%= f.text_field :lat %>
+<%= f.label :long %>
+<%= f.text_field :long %>
+<%= f.label :region %>
+<%= f.select :region, @regions.all.collect {|x| [x.location]}, {} %>
+<p><%= f.submit %></p>
+<% end %>

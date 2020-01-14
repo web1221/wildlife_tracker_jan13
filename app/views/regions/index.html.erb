@@ -1,0 +1,14 @@
+<h1>Regions</h1>
+
+<% if @regions.any? %>
+<ul>
+  <% @regions.each do |region| %>
+  <li><%= link_to region.location, region_path(region) %></li>
+  <% end %>
+</ul>
+<% else %>
+<p>There are no regions yet.</p>
+<% end %>
+
+
+<p><%= link_to "Create new region", new_region_path %></p>
